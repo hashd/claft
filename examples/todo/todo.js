@@ -1,14 +1,14 @@
 #!/usr/bin/env node
-
 import Add from './add'
 import App from '../../src/decorators/app';
+import Config from './config';
 
 @App("todo", {
   version: '0.0.1',
-  subcommands: [Add]
+  subcommands: [Add, Config]
 })
 class Todo {
 
 }
 
-Todo.parse(process.argv.slice(2))
+Todo.parse(process.argv)

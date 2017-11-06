@@ -11,9 +11,12 @@ export default class AddTodoCommand {
   })
   atTop = false
 
-  async execute(arg) {
-    if (this.atTop === true) {
-      console.log('Adding to top: ', arg)
-    } 
+  execute(args) {
+    console.log(args)
+  }
+
+  @OnFlag("t", { cascade: true })
+  addToTop(args) {
+    console.log(args)
   }
 }

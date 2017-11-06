@@ -1,9 +1,15 @@
 import "reflect-metadata"
 
-export const COMMAND_FLAG: string = "command:flag"
+export const COMMAND_FLAG: string = "command:flags"
 
-export default function Flag(shortForm: string, longForm: string, opts: {[key: string]: any} = {}) {
-  return Reflect.metadata(COMMAND_FLAG, {...opts, shortForm, longForm})
+export default function Flag(shortForm: string, longForm: string, desc: string, fn: string, type: Function) {
+  return Reflect.metadata(COMMAND_FLAG, {
+    shortForm, 
+    longForm,
+    desc,
+    fn,
+    type
+  })
 }
 
 export function getFlags(target: any, propertyKey: string) {

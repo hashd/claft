@@ -11,12 +11,18 @@ export default function App(name: String, opts: {[key: string]: any} = {}) {
 
       constructor(...args: any[]) {
         super(...args)
-  
-        console.log('Arguments: ', ...args)
+      }
+
+      execute(args) {
+        if (super.execute) {
+          super.execute(args)
+        } else {
+          console.log('Implementation missing for ', name)
+        }
       }
 
       static parse(args) {
-        parse.bind(this)(args)
+        parse.bind(this)(args.slice(2))
       }
     }
   }
