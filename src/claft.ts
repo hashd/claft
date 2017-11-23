@@ -1,5 +1,5 @@
 export default class Claft {
-  static start(args: string) {
-    console.log(args)
+  static run(clazz: any) {
+    clazz.parse(process.argv)
   }
 }

@@ -4,6 +4,7 @@ import Flag, { COMMAND_FLAG } from '../../src/decorators/flag';
 import App from '../../src/decorators/app';
 import OnFlag from '../../src/decorators/on_flag';
 import From from './from'
+import Claft from '../../src/claft';
 
 const { INR } = EXCHANGE_RATES
 
@@ -24,4 +25,4 @@ export default class Converter {
   }
 }
 
-Converter.parse(process.argv)
+Claft.run(Converter)

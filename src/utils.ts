@@ -1,6 +1,10 @@
 export function parse(args) {
   const firstArg = args[0],
         META = this.__CLAFT_META__
+  
+  if (META.isRoot === true) {
+    args = args.slice(2)
+  }
 
   if (firstArg === undefined || firstArg.length === 0) {
     new this().execute()
