@@ -1,0 +1,1 @@
+export type Klazz = { new(...args: any[]): any }
