@@ -1,17 +1,16 @@
-import "reflect-metadata"
+import { FLAG_INFO } from "../index"
 
-export const COMMAND_FLAG: string = "command:flags"
+export function Flag(shortForm: string, longForm: string, desc: string, type: Function) {
+  return function (target: object, key: string | symbol) {
+    let metadata = getFlags(target) || {}
 
-export default function Flag(shortForm: string, longForm: string, desc: string, fn: string, type: Function) {
-  return Reflect.metadata(COMMAND_FLAG, {
-    shortForm, 
-    longForm,
-    desc,
-    fn,
-    type
-  })
+    Reflect.defineMetadata(FLAG_INFO, {
+      ...metadata, 
+      [shortForm]: { shortForm, longForm, desc, type }
+    }, target)
+  }
 }
 
-export function getFlags(target: any, propertyKey: string) {
-  return Reflect.getMetadata(COMMAND_FLAG, target, propertyKey)
+export function getFlags(target: any) {
+  return Reflect.getMetadata(FLAG_INFO, target) || {}
 }

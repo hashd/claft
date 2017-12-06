@@ -5,13 +5,12 @@
       "outDir": "build/",
       "removeComments": true,
       "preserveConstEnums": true,
-      "sourceMap": true,
+      "sourceMap": false,
       "experimentalDecorators": true,
-      "emitDecoratorMetadata": true,
-      "allowJs": true
+      "emitDecoratorMetadata": true
   },
   "include": [
-      "src/**/*",
+      "src/**/*.ts",
       "examples/**/*"
   ],
   "exclude": [

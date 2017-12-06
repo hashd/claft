@@ -1,8 +1,8 @@
 import { parse } from '../utils';
-import Command from "./command";
+import { Cmd } from "./command";
 
-export default function App(name: String, opts: {[key: string]: any} = {}) {
-  return Command(name, {
+export function App(name: String, opts: {[key: string]: any} = {}) {
+  return Cmd(name, {
     ...opts,
     isRoot: true
   })

@@ -1,4 +1,4 @@
-export function parse(args) {
+function parse(args) {
   const firstArg = args[0],
         META = this.__CLAFT_META__
   
