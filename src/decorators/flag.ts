@@ -1,4 +1,4 @@
-import { FLAG_INFO } from "../index"
+import { FLAG_INFO } from "../_all"
 
 export function Flag(shortForm: string, longForm: string, desc: string, type: Function) {
   return function (target: object, key: string | symbol) {

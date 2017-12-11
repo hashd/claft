@@ -1,5 +1,7 @@
 ### CLAFT
-Command Line Application Framework on Typescript like Caporal.js, Vorpal.js and Commander.js
+##### Command Line Application Framework for TypeScript.
 
-### State
-Very Early Prototype can be found in the branch [subcommands](https://github.com/hashd/claft/tree/subcommands)
+Work in progress, CLI Application framework for TypeScript using Decorators.
+
+#### Setup
+

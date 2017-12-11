@@ -1,4 +1,4 @@
-import { Flag, getFlags } from "../index"
+import { Flag, getFlags } from "../_all"
 
 export function Option(shortForm: string, longForm: string, desc: string) {
   return Flag(shortForm, longForm, desc, Boolean)

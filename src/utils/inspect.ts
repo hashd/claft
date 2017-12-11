@@ -1,4 +1,4 @@
-import { Klazz } from "../index";
+import { Klazz } from "../_all";
 
 export function inspect(clazz: Klazz) {
   Reflect.getMetadataKeys(clazz).forEach(console.log)

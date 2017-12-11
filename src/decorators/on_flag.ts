@@ -1,4 +1,4 @@
-import { ON_FLAG_INFO } from "../index";
+import { ON_FLAG_INFO } from "../_all";
 
 export function OnFlag(flag) {
   return (target: Object, key: string | symbol, descriptor: TypedPropertyDescriptor<Function>): any => {

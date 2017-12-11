@@ -1,4 +1,4 @@
-import { parse, COMMAND_INFO, Klazz } from '../index';
+import { parse, COMMAND_INFO, Klazz } from '../_all';
 
 export function Cmd(name: String, opts: {[key: string]: any} = {}) {
   return function <T extends Klazz> (Command: T) {

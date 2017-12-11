@@ -1,5 +1,4 @@
-import { parse } from '../utils';
-import { Cmd } from "./command";
+import { Cmd } from "../_all";
 
 export function App(name: String, opts: {[key: string]: any} = {}) {
   return Cmd(name, {

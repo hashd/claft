@@ -1,4 +1,4 @@
-import { Klazz } from "../index";
+import { Klazz } from "../_all";
 
 export interface Command {
   execute(args: string): void

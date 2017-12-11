@@ -1,4 +1,4 @@
-import { CommandInfo, commandInfo, Command, Klazz, CommandFlag, flagInfo, onFlagInfo, inspect } from "../index";
+import { CommandInfo, commandInfo, Command, Klazz, CommandFlag, flagInfo, onFlagInfo, inspect } from "../_all";
 
 export function parse([head, ...rest]: string[], command: Klazz): CommandInfo {
   let cCommandInfo = commandInfo(command),

@@ -1,4 +1,4 @@
-import { COMMAND_INFO, CommandInfo, parse, Klazz } from "../index";
+import { COMMAND_INFO, CommandInfo, parse, Klazz } from "../_all";
 
 export class Claft {
   static run(clazz: Klazz) {

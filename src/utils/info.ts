@@ -1,4 +1,4 @@
-import { COMMAND_INFO, FLAG_INFO, ON_FLAG_INFO, CommandInfo, CommandMeta, getFlags, getOnFlag } from "../index";
+import { COMMAND_INFO, FLAG_INFO, ON_FLAG_INFO, CommandInfo, CommandMeta, getFlags, getOnFlag } from "../_all";
 
 export function commandInfo(clazz: any): CommandMeta {
   return Reflect.getMetadata(COMMAND_INFO, clazz)
