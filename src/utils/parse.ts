@@ -8,22 +8,11 @@ export function parse([head, ...rest]: string[], command: Klazz): CommandInfo {
     console.log(subcommand, head)
     parse(rest, subcommand)
   } else {
-    console.log(head, rest)
+    console.log(command, head, rest)
+    Object.keys(command["prototype"]).forEach(k => console.log(k, Reflect.getMetadata("design:paramtypes", command["prototype"], k)))
   }
 
   return undefined
-  /* let commands = parseCommands(args, rootCommand),
-      flagArgs = args.slice(commands.length - 1),
-      cCommand = commands[commands.length - 1],
-      {flags, idx} = parseFlags(flagArgs, cCommand)
-
-  args = args.slice(idx)
-  commands.forEach(inspect)
-  return {
-    commands,
-    flags,
-    args
-  } */
 }
 
 function parseCommands(args: string[], rootCommand: Klazz): Klazz[] {

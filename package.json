@@ -2,12 +2,15 @@
   "name": "claft",
   "version": "1.0.0-SNAPSHOT",
   "description": "",
-  "main": "index.js",
+  "main": "build/index.js",
   "scripts": {
-    "compile": "tsc",
+    "build": "npm run clean && npm run build:src && npm run build:examples",
+    "build:examples": "tsc -p tsconfig-examples.json",
     "compiler-version": "tsc -v",
     "watch": "tsc -w",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf build",
+    "build:src": "tsc -p tsconfig.json"
   },
   "keywords": [],
   "author": "",

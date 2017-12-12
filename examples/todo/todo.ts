@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import Add from './add'
-import App from '../../src/decorators/app';
+import {App, Claft} from '../../src'
 import Config from './config';
 
 @App("todo", {
@@ -11,4 +11,4 @@ class Todo {
 
 }
 
-Todo.parse(process.argv)
+Claft.run(Todo)

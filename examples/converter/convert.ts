@@ -11,13 +11,13 @@ const { INR } = EXCHANGE_RATES
 })
 export default class Converter implements Command {
   @Flag("inr", "indian rupee", "Converts to Indian Rupees", Boolean)
-  toIndianRupee
+  toIndianRupee: boolean
 
   @Option("sgd", "singapore dollars", "Converts to Singapore Dollars")
-  toSingaporeDollars
+  toSingaporeDollars: boolean
 
   @Flag("aud", "australian dollar", "Converts to Australian Dollars", Boolean)
-  toAustralianDollars
+  toAustralianDollars: boolean
 
   execute(args) {
     console.log("Trying to convert ", args)
