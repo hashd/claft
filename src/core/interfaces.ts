@@ -6,11 +6,11 @@ export interface Command {
 
 export interface CommandFlag {
   name: string,
-  value: string
+  value: any
 }
 
 export interface CommandInfo {
-  commands: Klazz[],
+  command: Klazz,
   flags: CommandFlag[],
   args: string[]
 }
